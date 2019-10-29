@@ -7,7 +7,6 @@ $n = $e = $ds = $t = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-
     if (empty($_POST["title"])) {
         $title_error = "Topic title is required";
     } else {
@@ -42,8 +41,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($name_error == "" and $email_error == "" and $title_error == "" and $desc_error == "") {
 
+
         $name_error = $email_error = $title_error = $desc_error = "";
         $n = $e = $ds = $t = "";
+        header('Cache-Control: no cache'); //no cache
+        session_cache_limiter('private_no_expire'); // works
+        //session_cache_limiter('public'); // works too
         session_start();
 
         $db = mysqli_connect('localhost:3307', 'root', '', 'discussx') or die('Could not connect to database');
@@ -61,8 +64,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         mysqli_query($db, $new_query);
     }
 }
-
-
 function test_input($data)
 {
     $data = trim($data);
@@ -70,3 +71,4 @@ function test_input($data)
     $data = htmlspecialchars($data);
     return $data;
 }
+?>

@@ -12,6 +12,8 @@ $ts = $_GET["rS"]; ?>
     <title>Discuss X</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/post.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -23,7 +25,9 @@ $ts = $_GET["rS"]; ?>
         </p>
     </header>
     <main>
-        <h2><?= $ts ?> <?= $t ?></h2>
+        <h2 style="width:100%; text-align:center;">&nbsp;&nbsp;<span id="pq" style="position:relative;float:left;color:#000;background-color:rgb(208,206,206);text-align:center;padding: 2px;">#<?= $ts ?> </span><?= $t ?></h2>
+        <br />
+        <hr /><br />
         <?php
         $db = mysqli_connect('localhost:3307', 'root', '', 'discussx') or die('Could not connect to database');
         $extract = "SELECT * FROM `$t`;";
@@ -34,8 +38,10 @@ $ts = $_GET["rS"]; ?>
             while ($row = mysqli_fetch_assoc($res)) {
                 ?>
                 <article>
-                    <h3><?= $row['post_username'] ?> - <?= $row['post_date_of_creation'] ?>
-                        - <?= $row['post_email'] ?></h3>
+                    <h4><?= $row['post_username'] ?> - <span id="bc"><?= $row['post_date_of_creation'] ?></span></h4>
+                    <h5><b>#<?= $row['post_id'] ?></b></h5>
+                    <h4 id="abc"><?= $row['post_email'] ?></h4><br />
+                    <hr />
                     <p> <?= $row['post_desc'] ?> </p>
                 </article>
             <?php

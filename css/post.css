@@ -13,3 +13,16 @@
     border: 1px solid #888;
     max-width: 60%;
 }
+
+header h1 {
+    font-family: 'Pacifico',
+        cursive, sans-serif;
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+header p {
+    font-size: 22px;
+    font-family: 'Inconsolata',
+        monospace;
+}

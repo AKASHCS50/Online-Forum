@@ -1,6 +1,5 @@
 <?php include('form_validation.php') ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DiscussX</title>
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -20,7 +21,8 @@
         </p>
     </header>
     <main>
-        <h2>Add new topic <button id="new_topic_button" onclick="document.getElementById('modal').style.display='block'">+</button> </h2>
+        <h2>Add new topic<br /> <button id="new_topic_button" onclick="document.getElementById('modal').style.display='block'">+</button> </h2>
+        <br /><br />
 
         <?php
         $db = mysqli_connect('localhost:3307', 'root', '', 'discussx') or die('Could not connect to database');
@@ -32,12 +34,17 @@
             while ($row = mysqli_fetch_assoc($res)) {
                 ?>
                 <article>
-                    <h2><?= $row['topic_id'] ?> <?= $row['topic_title'] ?></h2>
-                    <h3><?= $row['topic_username'] ?> - <?= $row['topic_date_of_creation'] ?></h3>
-                    <p><?= $row['topic_email'] ?> <?= $row['topic_no_of_posts'] ?> </p>
+                    <h2> <?= $row['topic_title'] ?></h2>
+                    <h5><b>#<?= $row['topic_id'] ?></b></h5>
+                    <hr />
+                    <h4><?= $row['topic_username'] ?> - <span id="bc"><?= $row['topic_date_of_creation'] ?></span></h4>
+
+                    <h4 id="abc"><?= $row['topic_email'] ?></h4>
                     <!-- <button onclick="window.location.href = 'post_index.php?openS= $row['topic_id']';">Click Here</button> -->
-                    <a href="post_index.php?openS=<?= $row['topic_title'] ?>&rS=<?= $row['topic_id'] ?>" class="button">Click Here</a>
+                    <a href="post_index.php?openS=<?= $row['topic_title'] ?>&rS=<?= $row['topic_id'] ?>" class="button" id="mod_button">Posts <?= $row['topic_no_of_posts'] ?></a>
+                    <br />
                 </article>
+                <br /><br />
             <?php
                 }
             } else {
@@ -46,11 +53,8 @@
         }
         ?>
     </main>
-    <script>
-        var OpenForm = 0;
-    </script>
     <div id="modal">
-        <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post" border="1px solid dodgerblue">
+        <form action="" method="post" border="1px solid dodgerblue">
             <div id="new_topic_form">
                 <legend>
                     <h1>Add a new topic</h1>
@@ -67,6 +71,7 @@
                 <span class="error"><?= $desc_error ?></span>
                 <textarea type="text" class="longType" placeholder="Give Description of topic" rows="5" cols="40" name="desc"><?= $ds ?></textarea>
                 <button type="submit" id="submit_button" name="new_submit">Submit</button>
+                <br />
             </div>
         </form>
     </div>
@@ -77,18 +82,6 @@
             </script>
         </h2>
     </footer>
-
-    <script>
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                openForm = 0;
-            }
-        }
-        if (openForm == 0)
-            document.getElementById('modal').style.display = 'none';
-        else
-            document.getElementById('modal').style.display = 'block';
-    </script>
 
 
 </body>

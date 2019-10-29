@@ -22,12 +22,16 @@ header {
 }
 
 header h1 {
+    font-family: 'Pacifico',
+        cursive, sans-serif;
     font-size: 48px;
     margin-bottom: 30px;
 }
 
 header p {
     font-size: 22px;
+    font-family: 'Inconsolata',
+    monospace;
 }
 
 main {
@@ -48,8 +52,51 @@ article:last-child {
     margin-bottom: 0;
 }
 
+article h5 {
+    position: relative;
+    float: right;
+    color: rgb(141, 141, 141);
+}
+
 article h3 {
     margin: 10px 0 25px 0;
+}
+
+article h4 {
+    color: #0528B6;
+    font-family: Helvetica,
+        Arial,
+        sans-serif;
+}
+
+#bc {
+    color: rgb(66, 54, 54);
+}
+
+#abc {
+    font-family: Georgia,
+        'Times New Roman',
+        Times,
+        serif;
+    float: left;
+}
+
+#mod_button {
+    text-decoration: none;
+    background-color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid rgb(80, 80, 80);
+    color: #000;
+    border-radius: 50%;
+    position: relative;
+    float: right;
+}
+
+#mod_button:hover {
+    background-color: rgb(80, 80, 80);
+    color: white;
 }
 
 article p {
@@ -69,8 +116,7 @@ footer {
   z-index: 1; */
 }
 
-#modal
-    {
+#modal {
     display: none;
     background-color: transparent;
     position: fixed;
@@ -80,19 +126,18 @@ footer {
     width: 100%;
     height: 100%;
     padding-top: 25px;
-    overflow: auto;
+    /* overflow: auto; */
 }
 
-#new_topic_form
-    {
+#new_topic_form {
     background-color: white;
     margin: 5% auto 15% auto;
-    border: 1px solid #888;
+    border: 4px solid #cecece;
     max-width: 60%;
 }
 
 hr {
-    border: 1px solid #f1f1f1;
+    border: 1px solid #cecece;
     margin-bottom: 25px;
 }
 
@@ -136,12 +181,17 @@ b {
     background-color: #4caf50;
     color: white;
     padding: 14px 20px;
-    margin: 8px 0;
+    display: block;
+    margin: 0 auto;
     border: none;
     cursor: pointer;
     opacity: 0.9;
 }
 
+legend h1 {
+    width: 100%;
+    text-align: center;
+}
 
 @media(max-width:768px) {
     header {
