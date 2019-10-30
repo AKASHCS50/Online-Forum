@@ -1,15 +1,30 @@
-<?php include('post_validation.php');
-$t = $_GET["openS"];
+<?php
+
+if ((isset($_GET["openS"], $_GET["rs"])))
+    header("location: index.php");
+include('post_validation.php');
+$t = strtolower($_GET["openS"]);
 $ts = $_GET["rS"]; ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <div id="loader">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Discuss X</title>
+
+    <link rel="icon" type="image/png" href="title.png">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/post.css">
     <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
@@ -29,7 +44,7 @@ $ts = $_GET["rS"]; ?>
         <br />
         <hr /><br />
         <?php
-        $db = mysqli_connect('localhost:3307', 'root', '', 'discussx') or die('Could not connect to database');
+        include('connect.php');
         $extract = "SELECT * FROM `$t`;";
         $res = mysqli_query($db, $extract);
         $res_check = mysqli_num_rows($res);
@@ -80,6 +95,14 @@ $ts = $_GET["rS"]; ?>
             </script>
         </h2>
     </footer>
+    <script>
+        var loader = document.getElementById("loader");
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                loader.style.display = 'none';
+            }, 3000);
+        });
+    </script>
 </body>
 
 </html>

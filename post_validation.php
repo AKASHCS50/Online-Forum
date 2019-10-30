@@ -36,18 +36,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($name_error == "" and $email_error == "" and $desc_error == "") {
 
         $t = $_GET["openS"];
+        $x = strtolower($t);
         $name_error = $email_error = $desc_error = "";
         $n = $e = $ds = "";
         session_start();
 
-        $db = mysqli_connect('localhost:3307', 'root', '', 'discussx') or die('Could not connect to database');
+        include('connect.php');
         $name = mysqli_real_escape_string($db, $_POST["name"]);
         $email = mysqli_real_escape_string($db, $_POST["email"]);
         $desc = mysqli_real_escape_string($db, $_POST["desc"]);
-        $query = "INSERT INTO `$t`(post_username, post_email, post_desc) VALUES ('$name', '$email', '$desc');";
-        mysqli_query($db, $query);;
-        // echo ($new_query);
-
+        $query = "INSERT INTO `$x`(post_username, post_email, post_desc) VALUES ('$name', '$email', '$desc');";
+        mysqli_query($db, $query);
+        $query = "UPDATE topics SET topic_no_of_posts=topic_no_of_posts+1 WHERE topic_title = '$t';";
+        mysqli_query($db, $query);
+        header('Location:' . $_SERVER['PHP_SELF'] . '?' . $_SERVER['QUERY_STRING']);
+        die;
     }
 }
 
@@ -59,3 +62,4 @@ function test_input($data)
     $data = htmlspecialchars($data);
     return $data;
 }
+?>
