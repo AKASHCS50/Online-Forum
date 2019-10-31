@@ -2,44 +2,32 @@
  ##  Online Discussion Forum
 <p align="center">
   
-(https://github.com/AKASHCS50/Online-Forum/blob/master/LICENSE)
+
 <!-- PROJECT LOGO --></p>
 <br />
 <p align="center">
   <a href="https://github.com/AKASHCS50/Online-Forum">
+   <img src="image.png" alt="DiscussX" width="300" height="300">
 <hr>
-
-
- 
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-* This Project implements Breadth First path finding algorithm. The algorithm uses FIFO model implemented using queue data structure to find the shortest path. For making the project more fun, and visually appealing I have used pygame python module. You can generate your own maze by just clicking on the box in order to make it behave as an obstacle.
-* Once done with your maze hit Spacebar to run the algorithm.
-* Also you can generate random maze by hitting the delete key.
-
-## Built With
-
-*
-
+* This is a web dev project implementing an Online discussion Forum using <kbd>HTML</kbd> <kbd>CSS</kbd> <kbd>PHP</kbd> and <kbd>MySQLi</kbd>.
+* It uses sql tables to bind a post topic with its corresponding posts.
+* It is hosted on [000webhost](https://online-discussion-forum-akashcs50.000webhostapp.com/Online-Forum/Online-Forum/index.php).
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
-
-
-#### Installation
-
-Clone the repo ✔&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* Clone the repo ✔&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ```sh
-git clone https://github.com/AKASHCS50/
+git clone https://github.com/AKASHCS50/Online-Forum.git
 ```
-
-## Roadmap
-
-
+* Hosted on [000webhost](https://in.000webhost.com/)
+```
+https://online-discussion-forum-akashcs50.000webhostapp.com/Online-Forum/Online-Forum/index.php
+```
 <!-- CONTRIBUTING -->
 ## Contributing
 
