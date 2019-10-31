@@ -1,9 +1,8 @@
 <?php
-
 if ((isset($_GET["openS"], $_GET["rs"])))
     header("location: index.php");
 include('post_validation.php');
-$t = strtolower($_GET["openS"]);
+$t = $_GET["openS"];
 $ts = $_GET["rS"]; ?>
 
 <!DOCTYPE html>
@@ -46,6 +45,7 @@ $ts = $_GET["rS"]; ?>
         <?php
         include('connect.php');
         $extract = "SELECT * FROM `$t`;";
+        // echo $extract;
         $res = mysqli_query($db, $extract);
         $res_check = mysqli_num_rows($res);
 

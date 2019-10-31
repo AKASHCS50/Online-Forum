@@ -75,7 +75,7 @@
                     </legend>
                     <hr id="hr" />
                     <label for="title"><b>Topic Title</b></label><span class="error"><?= $title_error ?></span>
-                    <input type="text" class="shortType" placeholder="Enter Topic Title" name="title" value="<?= $tes ?>" autofocus />
+                    <input type="text" class="shortType" placeholder="Enter Topic Title" name="title" value="<?= $tes ?>" />
                     <hr />
                     <label for="name"><b>Name</b></label> <span class="error"><?= $name_error ?></span>
                     <input type="text" class="shortType" placeholder="Enter Name" name="name" value="<?= $n ?>" />
