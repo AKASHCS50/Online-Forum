@@ -8,6 +8,8 @@
 <img src="image.png" alt="DiscussX" width="500" height="300">
 
 [![GitHub license](https://img.shields.io/github/license/AKASHCS50/Online-Forum)](https://github.com/AKASHCS50/Online-Forum/blob/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/AKASHCS50/Online-Forum)](https://github.com/AKASHCS50/Online-Forum/issues)
+[![GitHub forks](https://img.shields.io/github/forks/AKASHCS50/Online-Forum)](https://github.com/AKASHCS50/Online-Forum/network)
 <hr>
 
 <!-- ABOUT THE PROJECT -->
