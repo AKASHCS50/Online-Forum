@@ -6,14 +6,17 @@
 <p align="center"> 
 <a href="https://github.com/AKASHCS50/Online-Forum">
 <img src="image.png" alt="DiscussX" width="500" height="300">
+
 [![GitHub license](https://img.shields.io/github/license/AKASHCS50/Online-Forum)](https://github.com/AKASHCS50/Online-Forum/blob/master/LICENSE)
 <hr>
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-* This is a web dev project implementing an Online discussion Forum using <kbd>HTML</kbd> <kbd>CSS</kbd> <kbd>PHP</kbd> and <kbd>MySQLi</kbd>.
-* It uses sql tables to bind a post topic with its corresponding posts.
-* It is hosted on [000webhost](https://online-discussion-forum-akashcs50.000webhostapp.com/Online-Forum/Online-Forum/index.php).
+
+
+*  This is a web dev project implementing an Online discussion Forum using <kbd>HTML</kbd> <kbd>CSS</kbd> <kbd>PHP</kbd> and <kbd>MySQLi</kbd>.
+*  It uses sql tables to bind a post topic with its corresponding posts.
+*  It is hosted on [000webhost](https://online-discussion-forum-akashcs50.000webhostapp.com/Online-Forum/Online-Forum/index.php).
 
 
 <!-- GETTING STARTED -->
