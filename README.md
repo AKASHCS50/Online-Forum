@@ -1,15 +1,13 @@
-
  ##  Online Discussion Forum
-<p align="center">
-  
-
+  <p align="center">
+ 
 <!-- PROJECT LOGO --></p>
 <br />
-<p align="center">
-  <a href="https://github.com/AKASHCS50/Online-Forum">
-   <img src="image.png" alt="DiscussX" width="300" height="300">
+<p align="center"> 
+<a href="https://github.com/AKASHCS50/Online-Forum">
+<img src="image.png" alt="DiscussX" width="500" height="300">
+[![GitHub license](https://img.shields.io/github/license/AKASHCS50/Online-Forum)](https://github.com/AKASHCS50/Online-Forum/blob/master/LICENSE)
 <hr>
-
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
