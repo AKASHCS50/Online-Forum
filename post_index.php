@@ -33,7 +33,10 @@ $ts = $_GET["rS"]; ?>
 <body>
 
     <header>
-        <a href="https://discussx.akash.website/" class="anchor-tag">
+        <a href="https://discussx.akash.website/" class="anchor-tag" style="
+    text-decoration: none;
+    color: #FFF;
+">
             <h1>DiscussX</h1>
         </a>
         <p>
