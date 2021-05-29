@@ -107,6 +107,10 @@ article p {
 }
 
 
+.anchor-tag {
+    text-decoration: none;
+}
+
 #loader {
     position: fixed;
     overflow: hidden;

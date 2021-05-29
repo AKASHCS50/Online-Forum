@@ -29,7 +29,9 @@
     </div>
 
     <header>
-        <h1>DiscussX</h1>
+        <a href="https://discussx.akash.website/" class="anchor-tag">
+            <h1>DiscussX</h1>
+        </a>
         <p>
             Online Discussion Forum
         </p>
@@ -46,7 +48,7 @@
 
         if ($res_check > 0) {
             while ($row = mysqli_fetch_assoc($res)) {
-                ?>
+        ?>
                 <article>
                     <h2> <?= $row['topic_title'] ?></h2>
                     <h5><b>#<?= $row['topic_id'] ?></b></h5>
@@ -60,9 +62,9 @@
                 </article>
                 <br /><br />
             <?php
-                }
-            } else {
-                ?> <h1>No Topics yet..</h1>
+            }
+        } else {
+            ?> <h1>No Topics yet..</h1>
         <?php
         }
         ?>

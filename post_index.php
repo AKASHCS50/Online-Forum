@@ -33,7 +33,9 @@ $ts = $_GET["rS"]; ?>
 <body>
 
     <header>
-        <h1>DiscussX</h1>
+        <a href="https://discussx.akash.website/" class="anchor-tag">
+            <h1>DiscussX</h1>
+        </a>
         <p>
             Online Discussion Forum
         </p>
@@ -51,7 +53,7 @@ $ts = $_GET["rS"]; ?>
 
         if ($res_check > 0) {
             while ($row = mysqli_fetch_assoc($res)) {
-                ?>
+        ?>
                 <article>
                     <h4><?= $row['post_username'] ?> - <span id="bc"><?= $row['post_date_of_creation'] ?></span></h4>
                     <h5><b>#<?= $row['post_id'] ?></b></h5>
@@ -60,9 +62,9 @@ $ts = $_GET["rS"]; ?>
                     <p> <?= $row['post_desc'] ?> </p>
                 </article>
             <?php
-                }
-            } else {
-                ?> <h1>No Posts yet..</h1>
+            }
+        } else {
+            ?> <h1>No Posts yet..</h1>
         <?php
         }
         ?>
