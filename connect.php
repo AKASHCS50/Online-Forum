@@ -1,6 +1,6 @@
  <?php
 
-  //  $db = mysqli_connect('localhost', 'id11401863_dbms', 'my000webhost', 'id11401863_mysqlonlineforum') or die('Could not connect to database');
-    $db = mysqli_connect('localhost:3307', 'root', '', 'discussx') or die('Could not connect to database');
+    // $db = mysqli_connect(getenv(''), 'root', '', 'discussx') or die('Could not connect to database');
+    $db = mysqli_connect(getenv('DB_HOST'), getenv('DB_USER'), getenv('DB_PASSWORD'), getenv('DB_NAME')) or die('Could not connect to database');
 
    ?>
