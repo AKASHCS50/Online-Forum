@@ -27,7 +27,7 @@
 ```sh
 git clone https://github.com/AKASHCS50/Online-Forum.git
 ```
-* Hosted on [000webhost](https://in.000webhost.com/)
+* Hosted on [heroku](https://discussx.herokuapp.com/)
 ```
 https://online-discussion-forum-akashcs50.000webhostapp.com/Online-Forum/Online-Forum/index.php
 ```
@@ -45,9 +45,10 @@ Contributions are what make the open source community such an amazing place to b
 <!-- CONTACT -->
 ## Contact
 
-Akash Sharma:   [Gmail](mailto:akcount121@gmail.com) -   [Linkedin](https://www.linkedin.com/in/akash-sharma-1a5433178/)
-
-Project Link: [https://github.com/AKASHCS50/Online-Forum](https://github.com/Online-Forum)
+Akash Sharma:   [Gmail](mailto:akcount121@gmail.com) -   [Linkedin](https://www.linkedin.com/in/-akash-sharma/) <br/>
+ 
+Website Link : [https://discussx.herokuapp.com/](https://discussx.herokuapp.com/) <br />
+Project Link : [https://github.com/AKASHCS50/Online-Forum](https://github.com/Online-Forum)
 
 ## License
 [Apache 2.0](https://github.com/AKASHCS50/Online-Forum/blob/master/LICENSE) © Akash Sharma
