@@ -18,7 +18,7 @@
 
 *  This is a web dev project implementing an Online discussion Forum using <kbd>HTML</kbd> <kbd>CSS</kbd> <kbd>PHP</kbd> and <kbd>MySQLi</kbd>.
 *  It uses sql tables to bind a post topic with its corresponding posts.
-*  It is hosted on [000webhost](https://online-discussion-forum-akashcs50.000webhostapp.com/Online-Forum/Online-Forum/index.php).
+*  It is hosted on [heroku](https://discussx.akash.website/).
 
 
 <!-- GETTING STARTED -->
@@ -27,7 +27,7 @@
 ```sh
 git clone https://github.com/AKASHCS50/Online-Forum.git
 ```
-* Hosted on [heroku](https://discussx.herokuapp.com/)
+* Hosted on [heroku](https://discussx.akash.website/)
 ```
 https://online-discussion-forum-akashcs50.000webhostapp.com/Online-Forum/Online-Forum/index.php
 ```
@@ -47,11 +47,11 @@ Contributions are what make the open source community such an amazing place to b
 
 Akash Sharma:   [Gmail](mailto:akcount121@gmail.com) -   [Linkedin](https://www.linkedin.com/in/-akash-sharma/) <br/>
  
-Website Link : [https://discussx.herokuapp.com/](https://discussx.herokuapp.com/) <br />
+Website Link : [https://discussx.akash.website/](https://discussx.akash.website/) <br />
 Project Link : [https://github.com/AKASHCS50/Online-Forum](https://github.com/Online-Forum)
 
 ## License
-[Apache 2.0](https://github.com/AKASHCS50/Online-Forum/blob/master/LICENSE) © Akash Sharma
+[Apache 2.0](https://github.com/AKASHCS50/Online-Forum/blob/master/LICENSE) © 2019 Akash Sharma 
 <br/><br/>
 
  ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ 
