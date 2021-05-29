@@ -53,11 +53,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $result = mysqli_query($db, $query);
         $count = mysqli_num_rows($result);
         $count = $count + 1;
+        $db_name = getenv('DB_NAME');
         $query = "INSERT INTO topics(topic_id, topic_title, topic_username,topic_no_of_posts, topic_email) VALUES ($count,'$title','$name',1, '$email')";
         mysqli_query($db, $query);
-        $new_query = "CREATE TABLE `getenv('DB_NAME')`. `$title` ( `post_id` INT NOT NULL AUTO_INCREMENT , `post_date_of_creation` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , `post_username` VARCHAR(255) NOT NULL , `post_email` VARCHAR(255) NOT NULL , 
+        $new_query = "CREATE TABLE `$db_name`. `$title` ( `post_id` INT NOT NULL AUTO_INCREMENT , `post_date_of_creation` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , `post_username` VARCHAR(255) NOT NULL , `post_email` VARCHAR(255) NOT NULL , 
                 `post_desc` TEXT NOT NULL , PRIMARY KEY (`post_id`)) ENGINE = InnoDB;";
-        echo $new_query;
         mysqli_query($db, $new_query);
         $new_query = "INSERT INTO `$title`(post_username, post_email, post_desc) VALUES ('$name', '$email', '$desc');";
         mysqli_query($db, $new_query);
